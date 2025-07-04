@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-
+using System.Media;
 namespace Kalkulator;
 
 /// <summary>
@@ -10,10 +10,11 @@ namespace Kalkulator;
 
 public partial class ProstyCalc : UserControl
 {
-    private double firstNumber = 0;
+    private decimal firstNumber = 0;
     private string operation = "";
-    private bool isOperator = false;
+    private bool isOperator = false, isSecondNumberInput = false;
     private CalcLogic calcLogic = new CalcLogic();
+    
     
     public ProstyCalc()
     {
@@ -25,21 +26,94 @@ public partial class ProstyCalc : UserControl
     {
         Button button = (Button)sender;
         string buttonContent = button.Content.ToString();
+        string buttonTag = button.Tag?.ToString();
 
-        if (double.TryParse(buttonContent, out _) || buttonContent == ".")
+        // Obsługa wprowadzania cyfr i kropki dziesiętnej
+        if (double.TryParse(buttonContent, out _) || buttonContent == ",")
         {
+            if (buttonContent == ",")
+            {
+                if (Display.Text.Contains(","))
+                {
+                    return;
+                }
+            }
+
             if (isOperator || Display.Text == "0")
+            {
                 Display.Text = buttonContent;
+                isOperator = false;
+            }
             else
-               Display.Text += buttonContent;
-            isOperator = false;
+            {
+                Display.Text += buttonContent;
+            }
+            isSecondNumberInput = !string.IsNullOrEmpty(operation);
         }
+        // Obsługa operatorów binarnych (+, -, *, /)
         else if ("+-*/".Contains(buttonContent))
         {
-            firstNumber = double.Parse(Display.Text);
+            if (!string.IsNullOrEmpty(operation) && !isOperator && isSecondNumberInput)
+            {
+                try
+                {
+                    // Użyje domyślnej kultury (ustawionej globalnie na InvariantCulture)
+                    decimal secondNumber = decimal.Parse(Display.Text);
+                    firstNumber = calcLogic.CalculateTwo(firstNumber, secondNumber, operation);
+                    // Użyje domyślnej kultury (ustawionej globalnie na InvariantCulture)
+                    Display.Text = firstNumber.ToString();
+                }
+                catch (Exception ex)
+                {
+                    Display.Text = ex.Message;
+                    firstNumber = 0;
+                }
+            }
+            else
+            {
+                // Użyje domyślnej kultury (ustawionej globalnie na InvariantCulture)
+                firstNumber = decimal.Parse(Display.Text);
+            }
+
             operation = buttonContent;
             isOperator = true;
+            isSecondNumberInput = false;
+        }
+        // Obsługa operacji unarnych (np. pierwiastek kwadratowy)
+        else if (buttonTag == "sqrt")
+        {
+            try
+            {
+                // Użyje domyślnej kultury (ustawionej globalnie na InvariantCulture)
+                decimal currentNumber = decimal.Parse(Display.Text);
+                decimal result = calcLogic.CalculateOne(currentNumber, buttonTag);
 
+                // Użyje domyślnej kultury (ustawionej globalnie na InvariantCulture)
+                Display.Text = result.ToString();
+
+                if (!string.IsNullOrEmpty(operation))
+                {
+                    isSecondNumberInput = true;
+                }
+                else
+                {
+                    firstNumber = result;
+                    isSecondNumberInput = false;
+                }
+                isOperator = true;
+            }
+            catch (ArgumentException ex)
+            {
+                Display.Text = ex.Message;
+                isOperator = true;
+                isSecondNumberInput = false;
+            }
+            catch (FormatException)
+            {
+                Display.Text = "Error: Invalid number format.";
+                isOperator = true;
+                isSecondNumberInput = false;
+            }
         }
     }
 
@@ -47,10 +121,11 @@ public partial class ProstyCalc : UserControl
     {
         try
         {
-            double secondNumber = double.Parse(Display.Text);
-            double result = calcLogic.Calculate(firstNumber, secondNumber, operation);
+            decimal secondNumber = decimal.Parse(Display.Text);
+            decimal result = calcLogic.CalculateTwo(firstNumber, secondNumber, operation);
             Display.Text = result.ToString();
             isOperator = true;
+            MainWindow.soundManager.PlaySound(SoundType.EqualsButtonSound);
         }
         catch (DivideByZeroException ex)
         {
@@ -75,6 +150,7 @@ public partial class ProstyCalc : UserControl
         firstNumber = 0;
         operation = "";
         isOperator = false;
+        MainWindow.soundManager.PlaySound(SoundType.ClearButtonSound);
     }
     
-}
+    }

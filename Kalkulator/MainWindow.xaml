@@ -1,12 +1,12 @@
 ﻿<Window x:Class="Kalkulator.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Kalkulator" Height="600" Width="550" MinHeight="600" MinWidth="550">
+        Title="Kalkulator" Height="800" Width="550" MinHeight="800" MinWidth="550">
     <Grid>
         <Image x:Name="BackgroundGif"
                Panel.ZIndex="-1"
-               Height="1200"
-               Width="1200"
+               Height="1400"
+               Width="1400"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Center"/>
         <Button Name="MenuButton"
@@ -47,12 +47,12 @@
             </Button.Resources>
         </Button>
 
-        <Popup Name="MenuPopup" PlacementTarget="{Binding ElementName=MenuButton}" Placement="Right" StaysOpen="False">
+        <Popup Name="MenuPopup" PlacementTarget="{Binding ElementName=MenuButton}" Placement="Left" StaysOpen="False">
             <Border Background="White" BorderBrush="Gray" BorderThickness="1" Padding="5">
                 <StackPanel>
                     <Button Content="Prosty" Click="ModeButton_Click" Tag="Prosty" Margin="2"/>
-                    <Button Content="Naukowy" Click="ModeButton_Click" Tag="Naukowy" Margin="2"/>
-                    <Button Content="Programistyczny" Click="ModeButton_Click" Tag="Programistyczny" Margin="2"/>
+                    <Button Content="Naukowy (W BUDOWIE)" Click="ModeButton_Click" Tag="Naukowy" Margin="2"/>
+                    <Button Content="Programistyczny (W BUDOWIE)" Click="ModeButton_Click" Tag="Programistyczny" Margin="2"/>
                 </StackPanel>
             </Border>
         </Popup>

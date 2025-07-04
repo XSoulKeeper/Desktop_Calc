@@ -13,6 +13,10 @@
       <Resource Include="Resources\background.gif" />
       <None Remove="Resources\menu.png" />
       <Resource Include="Resources\menu.png" />
+      <None Remove="Resources\audio1.wav" />
+      <Resource Include="Resources\audio1.wav" />
+      <None Remove="Resources\audio2.wav" />
+      <Resource Include="Resources\audio2.wav" />
     </ItemGroup>
 
     <ItemGroup>

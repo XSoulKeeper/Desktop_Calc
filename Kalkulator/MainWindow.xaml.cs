@@ -8,12 +8,15 @@ namespace Kalkulator
 {
     public partial class MainWindow : Window
     {
+        public static SoundManager soundManager = new SoundManager();
+        
         public MainWindow()
         {
             InitializeComponent();
             var image = new BitmapImage(new Uri("pack://application:,,,/Kalkulator;component/Resources/background.gif"));
             ImageBehavior.SetAnimatedSource(BackgroundGif, image);
             CalculatorContent.Content = new ProstyCalc();
+            CalculatorContent.Content = new NaukCalc();
         }
 
 
@@ -36,7 +39,7 @@ namespace Kalkulator
                     CalculatorContent.Content = new ProstyCalc();
                     break;
                 case "Naukowy":
-                    CalculatorContent.Content = new TextBlock { Text = "Kalkulator naukowy (w budowie)", FontSize = 24, VerticalAlignment = VerticalAlignment.Center, HorizontalAlignment = HorizontalAlignment.Center };
+                    CalculatorContent.Content = new NaukCalc();
                     break;
                 case "Programistyczny":
                     CalculatorContent.Content = new TextBlock { Text = "Kalkulator programistyczny (w budowie)", FontSize = 24, VerticalAlignment = VerticalAlignment.Center, HorizontalAlignment = HorizontalAlignment.Center };

@@ -6,7 +6,6 @@ C:\Users\Jakub\Desktop\calc\Kalkulator\Kalkulator\bin\Debug\net8.0-windows\Kalku
 C:\Users\Jakub\Desktop\calc\Kalkulator\Kalkulator\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\Jakub\Desktop\calc\Kalkulator\Kalkulator\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\Jakub\Desktop\calc\Kalkulator\Kalkulator\obj\Debug\net8.0-windows\Kalkulator_MarkupCompile.cache
-C:\Users\Jakub\Desktop\calc\Kalkulator\Kalkulator\obj\Debug\net8.0-windows\Kalkulator_MarkupCompile.lref
 C:\Users\Jakub\Desktop\calc\Kalkulator\Kalkulator\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Users\Jakub\Desktop\calc\Kalkulator\Kalkulator\obj\Debug\net8.0-windows\Kalkulator.g.resources
 C:\Users\Jakub\Desktop\calc\Kalkulator\Kalkulator\obj\Debug\net8.0-windows\Kalkulator.GeneratedMSBuildEditorConfig.editorconfig
@@ -23,3 +22,6 @@ C:\Users\Jakub\Desktop\calc\Kalkulator\Kalkulator\obj\Debug\net8.0-windows\Prost
 C:\Users\Jakub\Desktop\calc\Kalkulator\Kalkulator\bin\Debug\net8.0-windows\WpfAnimatedGif.dll
 C:\Users\Jakub\Desktop\calc\Kalkulator\Kalkulator\obj\Debug\net8.0-windows\Kalkulator.csproj.AssemblyReference.cache
 C:\Users\Jakub\Desktop\calc\Kalkulator\Kalkulator\obj\Debug\net8.0-windows\Kalkulator.csproj.Up2Date
+C:\Users\Jakub\Desktop\calc\Kalkulator\Kalkulator\obj\Debug\net8.0-windows\NaukCalc.baml
+C:\Users\Jakub\Desktop\calc\Kalkulator\Kalkulator\obj\Debug\net8.0-windows\NaukCalc.g.cs
+C:\Users\Jakub\Desktop\calc\Kalkulator\Kalkulator\obj\Debug\net8.0-windows\Kalkulator.sourcelink.json
