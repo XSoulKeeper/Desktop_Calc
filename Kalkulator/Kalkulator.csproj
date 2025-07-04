@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\background.gif" />
+      <Resource Include="Resources\background.gif" />
+      <None Remove="Resources\menu.png" />
+      <Resource Include="Resources\menu.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+    </ItemGroup>
+
+</Project>
