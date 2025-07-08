@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Kalkulator.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Kalkulator" Height="800" Width="550" MinHeight="800" MinWidth="550">
+        Title="Calculator" Height="800" Width="550" MinHeight="800" MinWidth="550">
     <Grid>
         <Image x:Name="BackgroundGif"
                Panel.ZIndex="-1"
