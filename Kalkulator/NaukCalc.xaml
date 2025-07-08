@@ -22,38 +22,64 @@
                                 <RowDefinition/>
                                 <RowDefinition/>
                                 <RowDefinition/>
+                                <RowDefinition/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
+                                <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                 
-                            <!-- Przykładowe rozmieszczenie przycisków -->
-                            <Button Content="&#x221A;x" Tag="sqrt" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="0" Grid.Column="0"/>
-                            <Button Content="/" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="0" Grid.Column="1"/>
-                            <Button Content="*" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="0" Grid.Column="2"/>
-                            <Button Content="-" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="0" Grid.Column="3"/>
+                            <!-- Rozmieszczenie przycisków -->
+                            <Button Content="&#x25B2;" Tag="Functions" Name="Functions" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="0" Grid.Column="0"/>
+                            <Button Content="&#x221A;x" Tag="sqrt" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="0" Grid.Column="1"/>
+                            <Button Content="pi" Tag="pi" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="0" Grid.Column="2"/>
+                            <Button Content="e" Tag="e" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="0" Grid.Column="3"/>
+                            <Button Content="%" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="0" Grid.Column="4"/>
                 
-                            <Button Content="7" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="1" Grid.Column="0"/>
-                            <Button Content="8" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="1" Grid.Column="1"/>
-                            <Button Content="9" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="1" Grid.Column="2"/>
-                            <Button Content="+" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="1" Grid.Column="3"/>
+                            <Button Content="x^2" Tag="x^2" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="1" Grid.Column="0"/>
+                            <Button Content="^" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="1" Grid.Column="1"/>
+                            <Button Content="/" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="1" Grid.Column="2"/>
+                            <Button Content="*" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="1" Grid.Column="3"/>
+                            <Button Content="-" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="1" Grid.Column="4"/>
+                            
+                            <Button Content="10^x" Tag="10^" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="2" Grid.Column="0"/>
+                            <Button Content="7" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="2" Grid.Column="1"/>
+                            <Button Content="8" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="2" Grid.Column="2"/>
+                            <Button Content="9" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="2" Grid.Column="3"/>
+                            <Button Content="+" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="2" Grid.Column="4"/>
+                            
+                            <!-- Przycisk = zajmuje dwa miejsca -->
+                            <Button Content="1/x" Tag="factorial" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="3" Grid.Column="0"/>
+                            <Button Content="4" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="3" Grid.Column="1"/>
+                            <Button Content="5" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="3" Grid.Column="2"/>
+                            <Button Content="6" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="3" Grid.Column="3"/>
+                            <Button Content="=" FontSize="28" Click="Equals_Click" Margin="5" Grid.Row="3" Grid.Column="4" Grid.RowSpan="2"/>
                 
-                            <Button Content="4" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="2" Grid.Column="0"/>
-                            <Button Content="5" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="2" Grid.Column="1"/>
-                            <Button Content="6" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="2" Grid.Column="2"/>
-                            <Button Content="=" FontSize="28" Click="Equals_Click" Margin="5" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2"/>
-                
-                            <Button Content="1" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="3" Grid.Column="0"/>
-                            <Button Content="2" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="3" Grid.Column="1"/>
-                            <Button Content="3" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="3" Grid.Column="2"/>
+                            <Button Content="log()" Tag="log()" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="4" Grid.Column="0"/>
+                            <Button Content="1" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="4" Grid.Column="1"/>
+                            <Button Content="2" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="4" Grid.Column="2"/>
+                            <Button Content="3" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="4" Grid.Column="3"/>
                 
                             <!-- Przycisk C zajmuje dwa miejsca -->
-                            <Button Content="," FontSize="28" Click="Button_Click" Margin="5" Grid.Row="4" Grid.Column="0"/>
-                            <Button Content="0" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="4" Grid.Column="1"/>
-                            <Button Content="C" FontSize="28" Click="Clear_Click" Margin="5" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"/>
+                            <Button Content="ln()" Tag="ln()" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="5" Grid.Column="0"/>
+                            <Button Content="," FontSize="28" Click="Button_Click" Margin="5" Grid.Row="5" Grid.Column="1"/>
+                            <Button Content="0" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="5" Grid.Column="2"/>
+                            <Button Content="+/-" Tag="swap" FontSize="28" Click="Button_Click" Margin="5" Grid.Row="5" Grid.Column="3"/>
+                            <Button Content="C" FontSize="28" Click="Clear_Click" Margin="5" Grid.Row="5" Grid.Column="4"/>
                         </Grid>
+                        
+                        <Popup Name="TryFunc" PlacementTarget="{Binding ElementName=Functions}" Placement="Top" StaysOpen="False">
+                            <Border Background="White" BorderBrush="Gray" BorderThickness="1" Padding="5">
+                               <StatusBar>
+                                   <Button Content="sin" Tag="sin()" Click="Button_Click" Margin="2"/>
+                                   <Button Content="cos" Tag="cos()" Click="Button_Click" Margin="2"/>
+                                   <Button Content="tan" Tag="tan()" Click="Button_Click" Margin="2"/>
+                               </StatusBar> 
+                            </Border>
+                        </Popup>
+                        
                     </Grid>
                 </UserControl>
