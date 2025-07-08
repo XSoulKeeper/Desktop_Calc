@@ -9,12 +9,12 @@ Kalkulator
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\Jakub\Desktop\calc\Kalkulator\Kalkulator\App.xaml
-3-385466811
+C:\Users\Jakub\Desktop\calc\Kalkulator\Kalkulator\Code\App.xaml
+3-1348934851
 
-8895052689
+8235200434
 199-1686251580
-MainWindow.xaml;NaukCalc.xaml;ProstyCalc.xaml;
+Code\MainWindow.xaml;Code\NaukCalc.xaml;Code\ProstyCalc.xaml;
 
 False
 

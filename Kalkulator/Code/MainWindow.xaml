@@ -52,7 +52,6 @@
                 <StackPanel>
                     <Button Content="Prosty" Click="ModeButton_Click" Tag="Prosty" Margin="2"/>
                     <Button Content="Naukowy" Click="ModeButton_Click" Tag="Naukowy" Margin="2"/>
-                    <Button Content="Programistyczny (W BUDOWIE)" Click="ModeButton_Click" Tag="Programistyczny" Margin="2"/>
                 </StackPanel>
             </Border>
         </Popup>

@@ -24,7 +24,6 @@ public class CalcLogic
                 
         }
         
-        return 0;
     }
 
     public decimal CalculateOne(decimal a, string operation)
