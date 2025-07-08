@@ -50,8 +50,8 @@
         <Popup Name="MenuPopup" PlacementTarget="{Binding ElementName=MenuButton}" Placement="Left" StaysOpen="False">
             <Border Background="White" BorderBrush="Gray" BorderThickness="1" Padding="5">
                 <StackPanel>
-                    <Button Content="Prosty" Click="ModeButton_Click" Tag="Prosty" Margin="2"/>
-                    <Button Content="Naukowy" Click="ModeButton_Click" Tag="Naukowy" Margin="2"/>
+                    <Button Content="Simple" Click="ModeButton_Click" Tag="Prosty" Margin="2"/>
+                    <Button Content="Advanced" Click="ModeButton_Click" Tag="Naukowy" Margin="2"/>
                 </StackPanel>
             </Border>
         </Popup>
